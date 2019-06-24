@@ -22,6 +22,19 @@
             alert('你居然嫌弃我了');
             break;
         }
+        switch(msp){
+            // 小爱的第一个功能 累计求和
+            case "1":
+            case "总和":
+            var number = prompt('请输入整数，并且用、分隔 例如：1、2、3、4');
+            var arr = number.split('、');
+            var sum = 0;
+            for(i = 0; i < arr.length; i++){
+                sum += parseFloat(arr[i]);
+            }
+            alert('您要的总和出来啦：'+sum);
+            break;
+        }
     }
 
 </script>
