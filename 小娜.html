@@ -59,6 +59,7 @@
                 }
                 alert(sum);
                 break;
+
          // 小娜的第二个功能 获取时间  
             case "2" :
             case "时间" :
@@ -85,7 +86,21 @@
                 miao = '0' + miao;
             }
             alert(nian +'-'+ yue +'-'+ ri +' '+ shi +':'+ fen +':'+ miao);
+            break;
+
+        // 小娜的第三个功能 讲笑话
+            case "3" :
+            case "笑话" :
+            var joker = ['圣骑士的斩杀','笑话2','笑话3','笑话4'];
+            var suiji = Math.random() * joker.length;
+            var suiji = Math.floor(suiji);
+            alert(joker[suiji]);
+            break;
+            default:
+            alert('雨你无瓜');
+            break;
         }
+        
     }
 </script>
 
