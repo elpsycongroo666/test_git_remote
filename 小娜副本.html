@@ -45,23 +45,35 @@
             var fen = date.getMinutes();
             var miao = date.getSeconds();
             // 因为这里的类型是数字 获取出来的时间是 有些是只有一位数的 ，我们要把这个0 补上 所以用if语句判断 他们的大小小于10 而不用length来获取字符串的长度小于2的情况
-            if(yue < 10){
-                yue = "0" + yue ; //这里会将数字类型转换成字符串类型来相加
-            }
-            if(ri < 10){
-                ri = "0" + ri ; //这里会将数字类型转换成字符串类型来相加
-            }
-            if(shi < 10){
-                shi = "0" + shi ; //这里会将数字类型转换成字符串类型来相加
-            }
-            if(fen < 10){
-                fen = "0" + fen ; //这里会将数字类型转换成字符串类型来相加
-            }
-            if(miao < 10){
-                miao = "0" + miao ; //这里会将数字类型转换成字符串类型来相加
-            }
+            var a = 10;
+            yue < a ? yue = "0" + yue : yue;//这里会将数字类型转换成字符串类型来相加
+            ri < a ? ri= "0" + ri : ri;
+            shi < a ? shi= "0" + shi : shi;
+            fen < a ? fen= "0" + fen : fen;
+            miao < a ? miao= "0" + miao : miao;
+
             alert(nian+'-'+yue+'-'+ri+' '+shi+':'+fen+':'+miao);
             break;
+
+            // 小娜的第三个功能讲笑话
+            case "3":
+            case "笑话":
+            // 自己添加笑话
+            var joker = new Array(5);
+            for(i = 0; i < joker.length; i++){
+                joker[i] = prompt('请您输入第'+(i+1)+'个笑话');
+            }
+            // 因为Math.random获取出来的值是[0,1)之间的值 所以要乘以某个数
+            // 这里因为数组的长度=10的时候 Math.random * 10 所以 推出
+            // 数组的长度*Math.random = Math.random的取值范围
+
+            // floor是向下取整数 例如 -1.5时 取值就为-2 取小的整数
+            var suiji = Math.floor(Math.random() * joker.length);
+            alert(joker[suiji]);
+            break;
+            
+            default:
+            alert('喵喵喵?');
         }
     }
 
