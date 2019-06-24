@@ -33,7 +33,35 @@
                 sum += parseFloat(arr[i]);
             }
             alert(sum);
-            
+            break;
+            // 小娜的第二个功能
+            case "2":
+            case "时间":
+            var date = new Date();
+            var nian = date.getFullYear();
+            var yue = date.getMonth();
+            var ri = date.getDate();
+            var shi = date.getHours();
+            var fen = date.getMinutes();
+            var miao = date.getSeconds();
+            // 因为这里的类型是数字 获取出来的时间是 有些是只有一位数的 ，我们要把这个0 补上 所以用if语句判断 他们的大小小于10 而不用length来获取字符串的长度小于2的情况
+            if(yue < 10){
+                yue = "0" + yue ; //这里会将数字类型转换成字符串类型来相加
+            }
+            if(ri < 10){
+                ri = "0" + ri ; //这里会将数字类型转换成字符串类型来相加
+            }
+            if(shi < 10){
+                shi = "0" + shi ; //这里会将数字类型转换成字符串类型来相加
+            }
+            if(fen < 10){
+                fen = "0" + fen ; //这里会将数字类型转换成字符串类型来相加
+            }
+            if(miao < 10){
+                miao = "0" + miao ; //这里会将数字类型转换成字符串类型来相加
+            }
+            alert(nian+'-'+yue+'-'+ri+' '+shi+':'+fen+':'+miao);
+            break;
         }
     }
 
