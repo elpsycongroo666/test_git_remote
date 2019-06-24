@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-    
+
 </body>
 <script>
     /*
@@ -35,28 +37,56 @@
 
     // 第一步 死循环小娜的介绍
     // 输入q后结束死循环
-    while(true){
-        var msp = prompt('萨瓦迪卡，我是小娜，您的语音助手~~~~\n'+
-        '输入《编号》或《关键词》选择功能，输入q退出聊天\n'+
-        '1.计算《总和》\n'+
-        '2.获取《时间》\n'+
-        '3.讲个《笑话》\n')
-        if(msp === "q"){
+    while (true) {
+        var msp = prompt('萨瓦迪卡，我是小娜，您的语音助手~~~~\n' +
+            '输入《编号》或《关键词》选择功能，输入q退出聊天\n' +
+            '1.计算《总和》\n' +
+            '2.获取《时间》\n' +
+            '3.讲个《笑话》\n')
+        if (msp === "q") {
             alert('???你怎么肥事,想抛弃老子吗?');
             break;
         }
-    // 小娜的第一个功能 总和
-        switch(msp){
-            case "1" :
-            case "总和" :
-            var number = prompt('请输入整数,并且用,号分隔 例如 1,2,3,4');
-            var arr = number.split(',');
-            var sum = 0;
-            for(i = 0; i < arr.length; i++){
-                sum += parseFloat(arr[i]);
+        // 小娜的第一个功能 总和
+        switch (msp) {
+            case "1":
+            case "总和":
+                var number = prompt('请输入整数,并且用,号分隔 例如 1,2,3,4');
+                var arr = number.split(',');
+                var sum = 0;
+                for (i = 0; i < arr.length; i++) {
+                    sum += parseFloat(arr[i]);
+                }
+                alert(sum);
+                break;
+         // 小娜的第二个功能 获取时间  
+            case "2" :
+            case "时间" :
+            var date = new Date();
+            var nian = date.getFullYear();
+            var yue = date.getMonth();
+            var ri = date.getDate();
+            var shi = date.getHours();
+            var fen = date.getMinutes();
+            var miao = date.getSeconds();
+            if(yue < 10){
+                yue = '0' + yue;
             }
-            alert(sum);
+            if(ri < 10){
+                ri = '0' + ri;
+            }
+            if(shi < 10){
+                shi = '0' + shi;
+            }
+            if(fen < 10){
+                fen = '0' + fen;
+            }
+            if(miao < 10){
+                miao = '0' + miao;
+            }
+            alert(nian +'-'+ yue +'-'+ ri +' '+ shi +':'+ fen +':'+ miao);
         }
     }
 </script>
+
 </html>
