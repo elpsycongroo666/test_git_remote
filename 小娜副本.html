@@ -18,6 +18,22 @@
         '3.《笑话》讲笑话\n')
         if(msp === 'q'){
             alert('感谢您的使用，下次再见');
+            break;
+        }
+        switch(msp){
+            // 小娜的第一个功能
+            case "1":
+            case "总和":
+            var number = prompt('请输入整数并且用","分隔 例如：1,2,3,4');
+            // split 就是会将（）括号里面的分隔内容转换成字符串类型的数组 ["1","2","3","4"]这种形式
+            var arr = number.split(',');
+            var sum = 0;
+            for(i = 0; i < arr.length; i++){
+                // 这里因为是字符串类型相加 所以会隐士转换成字符串的连接 所以这里要用parsefloat()转换arr的类型
+                sum += parseFloat(arr[i]);
+            }
+            alert(sum);
+            
         }
     }
 
