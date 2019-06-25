@@ -34,6 +34,35 @@
             }
             alert('您要的总和出来啦：'+sum);
             break;
+
+            // 小爱的第二个功能
+            case "2":
+            case "时间":
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth();
+            var day = date.getDate();
+            var hours = date.getHours();
+            var min = date.getMinutes();
+            var sec = date.getSeconds();
+            
+            month < 10 ? "0" + month : month;
+            day < 10 ? "0" + day : day;
+            hours < 10 ? "0" + hours : hours;
+            min < 10 ? "0" + min : min;
+            sec < 10 ? "0" + sec : sec;
+            alert(year+"-"+(month+1)+"-"+day+" "+hours+":"+min+":"+sec);
+            break;
+            // 小爱的第三个功能
+            case "3":
+            case "笑话":
+            var joker = ["笑话1","笑话2","笑话3","笑话4","笑话5"];
+            var suiji =Math.floor(Math.random()*joker.length);         
+            alert(joker[suiji]);
+            break;
+
+            default:
+            alert('没听懂啊');
         }
     }
 
